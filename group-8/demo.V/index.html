@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Quick Math</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="timer">
+        <p id="demo"></p>
+
+        <script>
+        var countDownDate = new Date().getTime() ;
+        var x = setInterval(function() {
+          var now = new Date().getTime();
+          var distance = 3000 + countDownDate - now;
+
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+
+
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+            setInterval(function()
+          }
+        }, 1000);
+        </script>
+    </div>
+
+
+
+
+    <div class="Intro">
+      <h1>Quick Math</h1>
+      <h2>Welcome to Quick Math, test your calculating speed here</h2>
+    </div>
+
+    <div class="UI">
+      <h1 id = "Calculation" class="Calculation"></h1>
+
+
+        <button class="true" type="button" name="true" onclick="myFunction()">TRUE</button>
+        <button class="false" type="button" name="flase">FALSE</button>
+
+
+    </div>
+
+    <script src="main.js">
+
+    </script>
+  </body>
+</html>
