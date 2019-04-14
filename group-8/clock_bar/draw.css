@@ -1,0 +1,11 @@
+.clockBarBorder{
+  border: 2px solid black!important;
+  width: 400px;
+  margin: 20px;
+}
+
+.clockBarFluid{
+  background-color: green!important;
+  height:24px;
+  width:0%;
+}

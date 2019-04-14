@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <link rel="stylesheet" type="text/css" href="./draw.css">
+        <script type="text/javascript" src="./class.js"></script>
     </head>
     <body>
         <div>
             <button type="button" onclick="new clockBarManager().timeProcess();" style="padding:15px 32px;">time</button>
         </div>
-        <div>
-            <p id="demo"></p>
+        <div id="Bar counting" class="clockBarBorder">
+            <div id="perCents" class="clockBarFluid"></div>
         </div>
-        <script type="text/javascript" src="./class.js"></script>
+        
     </body>
 </html>
