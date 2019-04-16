@@ -1,5 +1,7 @@
 body {
   background-color: #429A20;
+  height: auto;
+
 }
 
 .Intro {
@@ -11,10 +13,10 @@ body {
 .UI {
   width: 50%;
   border:  solid green;
-  padding-bottom: 20%;
-  background: grey;
+  background-color: grey;
   margin: 20px auto;
-  height: 200px;
+  padding-bottom: 5%;
+  height: 45%;
 }
 
 .Calculation {
@@ -22,21 +24,43 @@ body {
   font-size: 8vw;
 }
 
-.true {
-  float:left;
-  margin-left: 15%;
-  font-size: 4vw;
-
+.button {
+  padding: 5%;
+  background: red;
 }
 
+.true {
+  display: inline;
+  font-size: 5vw;
+}
 .false {
-  float: right;
-  margin-right: 15%;
-  font-size: 4vw;
+  display: inline;
+  font-size: 5vw;
 }
 
 .score {
   font-size: 10vw;
   text-align: center;
   font-weight: bold;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+p {
+  margin: 0%;
 }

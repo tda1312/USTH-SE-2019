@@ -37,8 +37,9 @@ function checkTrue(){
      document.getElementById('score').innerHTML=score;
    }
  else{
-    score-=1;
-    document.getElementById('score').innerHTML=score;
+   score=0;
+   document.getElementById('score').innerHTML=score;
+   alert("You fucking lost");
  }
  genNew();
 }
@@ -49,8 +50,9 @@ function checkTrue(){
       document.getElementById('score').innerHTML=score;
     }
   else{
-     score-=1;
+     score=0;
      document.getElementById('score').innerHTML=score;
+     alert("You fucking lost");
   }
   genNew();
 }
