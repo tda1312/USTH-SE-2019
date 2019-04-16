@@ -5,7 +5,7 @@
 	localStorage.setItem(localStorageName, highScore);
 -->
 
-
+<!DOCTYPE html>
 <html>
 <head>
 	<style>
@@ -19,9 +19,15 @@
 			font-size: 35px;
 			color: rgb(0, 0, 0);
 		}
-	<script src="function.js"></script>
 	</style>
+	<script src='function.js'></script>
 </head>
 <body>
-	<div class="scrboard">BEST SCORE: <br><span id="highscore"></span></div>
+	<div class="scrboard">
+		BEST SCORE: <span id="highscore"></span>
+		<script>
+			highScore();
+		</script>
+	</div>
 </body>
+</html>
