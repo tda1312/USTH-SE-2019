@@ -1,37 +1,66 @@
 body {
-  background-color: #429A20;
   height: auto;
+  background-image: url("math.jpg");
+  background-repeat:repeat-x;
+  background-size:cover;
+}
 
+html {
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-x: hidden;
 }
 
 .Intro {
   text-align: center;
   font-family: 'Germania One', cursive;
   font-size: 20px;
+  color: tomato;
+  text-outline: red;
+
 }
 
 .UI {
   width: 50%;
-  border:  solid green;
+  border: solid;
   background-color: grey;
   margin: 20px auto;
   padding-bottom: 5%;
   height: 45%;
+  border-radius: 20px;
+    background-image: url("color.jpg");
+    background-size: cover;
 }
 
 .Calculation {
   text-align: center;
   font-size: 8vw;
+  color:#6E1D15    ;
 }
 
-.button {
-  padding: 5%;
-  background: red;
+button {
+  text-align: center;
+border: 2px solid #2ecc71;
+outline: none;
+  background: black;
+  color: #09B5FC;
+  border-radius: 60px;
+  transition: 0.25s;
+  cursor: pointer;
 }
+
+button:hover {
+  background: #133F51  ;
+}
+
 
 .true {
   display: inline;
   font-size: 5vw;
+
 }
 .false {
   display: inline;
@@ -39,9 +68,10 @@ body {
 }
 
 .score {
-  font-size: 10vw;
+  font-size: 300%;
   text-align: center;
   font-weight: bold;
+  color: lightblue;
 }
 
 .column {

@@ -1,13 +1,7 @@
-<!-- save HS on GameOver State -->
-
-<!-- create: function(){
-	highScore = math.max(score, highScore);
-	localStorage.setItem(localStorageName, highScore);
--->
 
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
 	<style>
 		.scrboard{
 			outline: thick ridge red;
@@ -20,14 +14,13 @@
 			color: rgb(0, 0, 0);
 		}
 	</style>
-	<script src='function.js'></script>
-</head>
-<body>
-	<div class="scrboard">
-		BEST SCORE: <span id="highscore"></span>
-		<script>
-			highScore();
-		</script>
+	<script type="text/javascript" src='function.js'></script>
+  </head>
+  
+  <body>
+	<div style="display: none" class="scrboard" id="scrdiv">
+		BEST SCORE: <span id="scrdisplay"></span>
 	</div>
-</body>
+	<input type="button" name="answer" value="Get highscore" onclick="showHS()">
+  </body>
 </html>
