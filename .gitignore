@@ -1,0 +1,7 @@
+#dont track content of these forder
+
+#npm eslint#
+node_modules/
+.eslintrc.json
+package-lock.json
+package.json

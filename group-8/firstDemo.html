@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quick Math</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
+
+    <style>
+		.scrboard{
+			outline: thick ridge red;
+			border: 2px solid red;
+			border-radius: 8px 12px 15px;
+			font-family: Comic Sans MS, cursive, sans-serif;
+			padding: 0px;
+			text-align: center;
+			font-size: 35px;
+			color: rgb(0, 0, 0);
+		}
+	</style>
+  <script src="main.js"></script>
+  </head>
+
+  <body>
+
+    <p id="score" class="score"></p>
+    <script>document.getElementById('score').innerHTML= displayScore()</script>
+
+    <div class="Intro">
+      <h1>Quick Math</h1>
+      <h2>Welcome to Quick Math, test your calculating speed here</h2>
+    </div>
+
+    <div class="UI">
+      <h1 id = "Calculation" class="Calculation" ></h1>
+      <script>
+        genNew();
+      </script>
+
+
+        <button id = "buttontrue" class="true" type="button"  onclick="checkTrue()">TRUE</button>
+        <button id = "buttonfalse" class="false" type="button"   onclick="checkFalse()">FALSE</button>
+
+
+    </div>
+
+  </body>
+
+</html>
