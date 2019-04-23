@@ -21,7 +21,6 @@ function clockBarManager () {
       if (distance > limited) {
         clearInterval(process)
         drawFluid('100%')
-        return 1
       }
 
       // set percentage of time cooldown

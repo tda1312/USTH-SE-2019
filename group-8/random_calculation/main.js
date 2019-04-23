@@ -1,7 +1,7 @@
-let score = 0;
-let rightAns;
-let wrongAns;
-let finalAnswer;
+let score = 0
+let rightAns  
+let wrongAns
+let finalAnswer
 
 function genNew() {
   var sign = ['+', '-', 'x', ':'];

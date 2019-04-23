@@ -1,7 +1,8 @@
 .clockBarBorder{
   border: 2px solid black!important;
   width: 400px;
-  margin: 20px;
+  margin-left: 10vw;
+  margin-top: 4%;
 }
 
 .clockBarFluid{

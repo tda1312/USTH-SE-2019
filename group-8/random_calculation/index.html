@@ -4,11 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quick Math</title>
+
+    <!-- quick math function path -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
+    <script src="main.js"></script>
 
-
-  <script src="main.js"></script>
+    <!-- clock bar path-->
+    <link rel="stylesheet" type="text/css" href="../clock_bar/draw.css">
+    <script type="text/javascript" src="../clock_bar/class.js"></script>
   </head>
 
   <body>
@@ -24,6 +28,9 @@
     <div class="UI">
       <h1 id = "Calculation" class="Calculation" ></h1>
       <script>
+        // callout clockBar
+        timeout = new clockBarManager().timeProcess();
+        // create math
         genNew();
       </script>
 
@@ -37,6 +44,10 @@
       </div>
     </div>
 
+    <!-- clock bar path -->
+    <div id="Bar counting" class="clockBarBorder">
+      <div id="perCents" class="clockBarFluid"></div>
+    </div>
 
     </div>
 
