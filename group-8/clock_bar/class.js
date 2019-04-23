@@ -1,7 +1,7 @@
-let limited = 2000 // define valid time for 1 round (milisecond)
+let limited = 1200 // define valid time for 1 round (milisecond)
 let initTime // define init time beginning count
 let fracTime // percentage of time valid to answer
-let timeUpdate = 50 // define  of fluild of progress
+let timeUpdate = 10 // define  of fluild of progress
 
 // manager of system clock
 function clockBarManager () {
@@ -21,6 +21,7 @@ function clockBarManager () {
       if (distance > limited) {
         clearInterval(process)
         drawFluid('100%')
+        document.getElementById('test').innerHTML = '1'
       }
 
       // set percentage of time cooldown

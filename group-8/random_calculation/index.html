@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quick Math</title>
 
+    <!-- time out variable -->
+    <div id = "test" style="visibility: hidden;"></div>
+
     <!-- quick math function path -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
@@ -27,20 +30,46 @@
 
     <div class="UI">
       <h1 id = "Calculation" class="Calculation" ></h1>
+      <!-- initial prepare loading page-->
       <script>
         // callout clockBar
-        timeout = new clockBarManager().timeProcess();
+        var timeout = new clockBarManager().timeProcess();
+
+        // update time out
+        var test = setInterval(()=>{
+          if (document.getElementById('test').textContent=='1'){
+            document.getElementById('test').innerHTML='0';
+            restart();
+            alert('You fucking lost');
+            timeout = new clockBarManager().timeProcess();
+          }
+        },10)
+
+        // true button click
+        function True(){
+          document.getElementById('test').innerHTML='0';
+            checkTrue();
+            timeout = new clockBarManager().timeProcess();
+        }
+
+        // false button click
+        function False(){
+          document.getElementById('test').innerHTML='0';
+            checkFalse();
+            timeout = new clockBarManager().timeProcess();
+        }
+
         // create math
         genNew();
       </script>
 
     <div class="row">
       <div class="column">
-        <button id = "buttontrue" class="true" type="button"  onclick="checkTrue()">TRUE</button>
+        <button id = "buttontrue" class="true" type="button"  onclick="True()">TRUE</button>
       </div>
 
       <div class="column">
-        <button id = "buttonfalse" class="false" type="button"  onclick="checkFalse()">FALSE</button>
+        <button id = "buttonfalse" class="false" type="button"  onclick="False()">FALSE</button>
       </div>
     </div>
 

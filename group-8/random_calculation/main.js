@@ -56,3 +56,8 @@ function displayScore() {
   //var score=0;
   return 'Score:' + score;
 }
+
+function restart () {
+  score = 0;
+  document.getElementById('score').innerHTML = score;
+}
