@@ -1,7 +1,7 @@
-let score = 0
-let rightAns  
-let wrongAns
-let finalAnswer
+let score = 0;
+let rightAns;
+let wrongAns;
+let finalAnswer;
 
 function genNew() {
   var sign = ['+', '-', 'x', ':'];
@@ -33,7 +33,7 @@ function checkTrue() {
   } else {
     score = 0;
     document.getElementById('score').innerHTML = score;
-    alert('You fucking lost');
+    alert('You lost');
   }
 
   genNew();
@@ -46,7 +46,7 @@ function checkFalse() {
   } else {
     score = 0;
     document.getElementById('score').innerHTML = score;
-    alert('You fucking lost');
+    alert('You lost');
   }
 
   genNew();
@@ -55,9 +55,4 @@ function checkFalse() {
 function displayScore() {
   //var score=0;
   return 'Score:' + score;
-}
-
-function restart () {
-  score = 0;
-  document.getElementById('score').innerHTML = score;
 }
