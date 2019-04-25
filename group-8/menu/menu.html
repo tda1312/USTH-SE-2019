@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Quick Math Menu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <h1 class="main-font title">Quick Math</h1>
+    <ul id="main-menu"></ul>
+ 
+    <!-- Button list --> 
+    <div class="menuOpt">
+    <button id="btnStart">Start Game</button>
+    <br>
+    <br>
+
+    <button id="btnScore">High Score</button>
+    <br>
+    <br>
+    
+    <button id="btnGuide">How to Play</button>
+    </div>
+
+
+<!-- Guide Pop up-->    
+    <div id="guidePop" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Insert guide here.....</p>
+        </div>        
+    </div>
+
+ 
+<script>
+//  CLOSE POP UP
+
+   // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+        
+//  GUIDE POP UP 
+
+    // Get the modal
+    var modalGuide = document.getElementById('guidePop');
+            
+    // Get the button that opens the modal
+    var btnGuide = document.getElementById("btnGuide");
+                       
+    // When the user clicks the button, open the modal 
+    btnGuide.onclick = function() {
+        modalGuide.style.display = "block";
+    }
+            
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modalGuide.style.display = "none";
+    }
+            
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modalGuide) {
+            modalGuide.style.display = "none";
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>
