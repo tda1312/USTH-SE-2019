@@ -20,12 +20,12 @@ function clockBarManager () {
 
       if (distance > limited) {
         clearInterval(process)
-        drawFluid('100%')
+        drawFluid('0%')
         document.getElementById('test').innerHTML = '1'
       }
 
       // set percentage of time cooldown
-      fracTime = Math.round((distance / limited) * 100)
+      fracTime = Math.round(100-((distance / limited) * 100))
 
       // draw percentage to page
       drawFluid(fracTime + '%')

@@ -4,7 +4,7 @@
 }
 
 .clockBarFluid{
-  background-color: blue!important;
+  background-color: green!important;
   height:24px;
-  width:0%;
+  width:100%;
 }
