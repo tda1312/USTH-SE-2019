@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quick Math</title>
 
-    <!-- time out variable -->
-    <div id = "test" style="visibility: hidden;"></div>
-
     <!-- quick math function path -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
@@ -29,6 +26,9 @@
     </div>
 
     <div class="UI">
+      <!-- time out variable -->
+      <div id = "test" style="background-color:brown;">0</div>
+
       <h1 id = "Calculation" class="Calculation" ></h1>
       <!-- initial prepare loading page-->
       <script>
@@ -38,9 +38,9 @@
         // update time out
         var test = setInterval(()=>{
           if (document.getElementById('test').textContent=='1'){
-            document.getElementById('test').innerHTML='0';
             restart();
             alert('You fucking lost');
+            document.getElementById('test').innerHTML='0';
             timeout = new clockBarManager().timeProcess();
           }
         },10)
