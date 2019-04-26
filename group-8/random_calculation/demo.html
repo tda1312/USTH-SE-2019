@@ -27,7 +27,7 @@
 
     <div class="UI">
       <!-- time out variable -->
-      <div id = "test" style="background-color:brown;">0</div>
+      <div id = "test" style="display: none;">0</div>
 
       <h1 id = "Calculation" class="Calculation" ></h1>
       <!-- initial prepare loading page-->
@@ -39,7 +39,7 @@
         var test = setInterval(()=>{
           if (document.getElementById('test').textContent=='1'){
             restart();
-            alert('You fucking lost');
+            alert('You lost');
             document.getElementById('test').innerHTML='0';
             timeout = new clockBarManager().timeProcess();
           }
