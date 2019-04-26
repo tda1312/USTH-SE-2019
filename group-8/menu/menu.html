@@ -21,33 +21,43 @@
     <br>
     <br>
 
-    <button id="btnScore">High Score</button>
-    <br>
-    <br>
-    
     <button id="btnGuide">How to Play</button>
+    <br>
+    <br>
+
+    <button id="btnCredits">Credits</button>
     </div>
 
 
 <!-- Guide Pop up-->    
     <div id="guidePop" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Insert guide here.....</p>
+            <div class="close">&times;</div>
+            <br>
+            Insert guide here.....
         </div>        
     </div>
 
+<!-- Credits Pop up --> 
+    <div id="creditsPop" class="credits">
+        <div class="creditsContent">
+            <p>Insert Credits here </p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptatem voluptate corporis iste voluptatibus adipisci nulla possimus repellendus eum illum molestiae, atque temporibus ratione tempore itaque, ipsa dicta, sed modi.</p>
+        </div>
+    </div>
  
 <script>
+
 //  CLOSE POP UP
 
-   // Get the <span> element that closes the modal
+   // Get the <span> element that closes the mcreditsPopodal
     var span = document.getElementsByClassName("close")[0];
         
 //  GUIDE POP UP 
 
     // Get the modal
-    var modalGuide = document.getElementById('guidePop');
+    var modalGuide = document.getElementById("guidePop");
             
     // Get the button that opens the modal
     var btnGuide = document.getElementById("btnGuide");
@@ -62,15 +72,37 @@
         modalGuide.style.display = "none";
     }
             
-    // When the user clicks anywhere outside of the modal, close it
+
+
+//  Credits POP UP
+    //Get button
+    var btnCredits = document.getElementById("btnCredits");
+
+    //Open modalCredits
+    var modalCredits = document.getElementById("creditsPop");
+    
+
+    //Open on Click
+    btnCredits.onclick = function() {
+        modalCredits.style.display = "block";
+
+    }
+
+    //Close on click
+    modalCredits.onclick = function() {
+        modalCredits.style.display = "none";
+    }
+    //close on click outside
     window.onclick = function(event) {
+        if (event.target == modalCredits) {
+            modalCredits.style.display = "none";
+        }
         if (event.target == modalGuide) {
             modalGuide.style.display = "none";
         }
     }
-
-
-
+    
+    
 
 </script>
 </body>
