@@ -1,4 +1,4 @@
-let limited = 1200 // define valid time for 1 round (milisecond)
+let limited = 4000 // define valid time for 1 round (milisecond)
 let initTime // define init time beginning count
 let fracTime // percentage of time valid to answer
 let timeUpdate = 10 // define  of fluild of progress
