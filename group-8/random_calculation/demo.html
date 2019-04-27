@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
     <script src="main.js"></script>
 
-    <!-- clock bar path-->
+    <!-- clock bar loading path-->
     <link rel="stylesheet" type="text/css" href="../clock_bar/draw.css">
     <script type="text/javascript" src="../clock_bar/class.js"></script>
   </head>
@@ -27,7 +27,7 @@
 
     <div class="UI">
 
-      <!-- clock bar path -->
+      <!-- clock bar render path -->
       <div id="Bar counting" class="clockBarBorder">
         <div id="perCents" class="clockBarFluid"></div>
       </div>
@@ -36,7 +36,7 @@
 
       <!-- initial prepare loading page-->
       <script>
-        
+
         // callout clockBar
         let clockBar = new clockBarManager();
         clockBar.timeProcess();
@@ -50,23 +50,21 @@
         var test = setInterval(function () {
           let clockBar = sendTosetInterval ();
           if (clockBar.getTimeout() === 1){
-            restart();
-            alert('You lost');
-            clockBar.setTimeout('false');
-            clockBar.timeProcess();
+            window.location.href = '../menu/endGame.html';
           }
         }, 10)
 
         // true button click
         function True(){
           checkTrue();
-          timeout = clockBar.timeProcess();
+          clockBar.setTimeout('false');
+          clockBar.timeProcess();
         }
 
         // false button click
         function False(){
           checkFalse();
-          timeout = clockBar.timeProcess();
+          window.location.href = '../menu/endGame.html';
         }
 
         // create math
