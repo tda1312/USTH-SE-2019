@@ -50,6 +50,7 @@
         var test = setInterval(function () {
           let clockBar = sendTosetInterval ();
           if (clockBar.getTimeout() === 1){
+            RecordScore()
             window.location.href = '../menu/endGame.html';
           }
         }, 10)

@@ -16,5 +16,5 @@ function checkHS () {
 
 function updateHighScore (score, highScore) {
   document.getElementById('highScore').innerHTML = 'HighScore: ' + highScore // print high score
-  document.getElementById('score').innerHTML = 'Score' + score // print score
+  document.getElementById('score').innerHTML = 'Score: ' + score // print score
 }
