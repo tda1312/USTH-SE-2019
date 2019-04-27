@@ -12,20 +12,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="endGame.css">
+
+    <!-- high score loading path-->
+    <script type="text/javascript" src='../score_record/function.js'></script>
 </head>
 <body>
     <h1 class="end_game">Game Over :(</h1>
 
 <!-- Score Display -->
 <div class ="display">
-    <div class="score">  Score: 
-        <div class ="sNum" > 3</div>
+    <div id="score" class="score">  Score: 
+        <div class ="sNum" ></div>
     </div>
 
-    <div class="highScore">  High Score: 
-        <div class ="hNum" > 7</div>
+    <div id="highScore" class="highScore">  High Score: 
+        <div class ="hNum" ></div>
     </div>
+    <!-- display score mechanism -->
+    <script> showHS() </script>
 </div>
+
 <!-- Button list-->
 <br>
 <br>
