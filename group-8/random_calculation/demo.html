@@ -26,42 +26,47 @@
     </div>
 
     <div class="UI">
-      <!-- time out variable  for clockbar-->
-      <div id = "test" style="display: none;">0</div>
+
       <!-- clock bar path -->
       <div id="Bar counting" class="clockBarBorder">
         <div id="perCents" class="clockBarFluid"></div>
       </div>
-  
 
       <h1 id = "Calculation" class="Calculation" ></h1>
+
       <!-- initial prepare loading page-->
       <script>
+        
         // callout clockBar
-        var timeout = new clockBarManager().timeProcess();
+        let clockBar = new clockBarManager();
+        clockBar.timeProcess();
+        
+        // function to send clockBar instant to setInterval
+        function sendTosetInterval () {
+          return clockBar;
+        }
 
         // update time out
-        var test = setInterval(()=>{
-          if (document.getElementById('test').textContent=='1'){
+        var test = setInterval(function () {
+          let clockBar = sendTosetInterval ();
+          if (clockBar.getTimeout() === 1){
             restart();
             alert('You lost');
-            document.getElementById('test').innerHTML='0';
-            timeout = new clockBarManager().timeProcess();
+            clockBar.setTimeout('false');
+            clockBar.timeProcess();
           }
-        },10)
+        }, 10)
 
         // true button click
         function True(){
-          document.getElementById('test').innerHTML='0';
-            checkTrue();
-            timeout = new clockBarManager().timeProcess();
+          checkTrue();
+          timeout = clockBar.timeProcess();
         }
 
         // false button click
         function False(){
-          document.getElementById('test').innerHTML='0';
-            checkFalse();
-            timeout = new clockBarManager().timeProcess();
+          checkFalse();
+          timeout = clockBar.timeProcess();
         }
 
         // create math
