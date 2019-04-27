@@ -1,7 +1,4 @@
 function showHS () {
-  var oldScore = 2 // set demo game score
-  localStorage.setItem('Score', JSON.stringify(oldScore)) // save game score as string
-
   checkHS()
 }
 
