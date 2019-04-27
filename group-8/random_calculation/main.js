@@ -31,7 +31,7 @@ function checkTrue () {
     score += 1
     document.getElementById('score').innerHTML = displayScore()
   } else {
-    localStorage.setItem('usrScore', JSON.stringify(score)) // save score
+    RecordScore()
     window.location.href = '../menu/endGame.html'
   }
 
@@ -43,7 +43,7 @@ function checkFalse () {
     score += 1
     document.getElementById('score').innerHTML = displayScore()
   } else {
-    localStorage.setItem('usrScore', JSON.stringify(score)) // save score
+    RecordScore()
     window.location.href = '../menu/endGame.html'
   }
 
@@ -52,4 +52,8 @@ function checkFalse () {
 
 function displayScore () {
   return 'Score:' + score
+}
+
+function RecordScore () {
+  localStorage.setItem('usrScore', JSON.stringify(score)) // save score
 }
