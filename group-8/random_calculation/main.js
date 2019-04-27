@@ -84,6 +84,9 @@ class RandomMath {
   getFinalAnswer () {
     return finalAnswer
   }
+  setScore (Message) {
+    score = Message
+  }
 }
 
 module.exports = new RandomMath()
