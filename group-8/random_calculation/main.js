@@ -57,3 +57,21 @@ function displayScore () {
 function RecordScore () {
   localStorage.setItem('usrScore', JSON.stringify(score)) // save score
 }
+
+// script to export function for testing
+class RandomMath {
+  genNewMath () {
+    genNew()
+  }
+  checkFalseMath () {
+    checkFalse()
+  }
+  checkTrueMath () {
+    checkTrue()
+  }
+  displayScoreMath () {
+    return displayScore()
+  }
+}
+
+module.exports = new RandomMath()
