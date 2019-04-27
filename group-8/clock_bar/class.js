@@ -57,3 +57,5 @@ class clockBarManager {
 function drawFluid (Message) {
   document.getElementById('perCents').style.width = Message
 }
+
+module.exports = new clockBarManager()

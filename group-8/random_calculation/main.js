@@ -1,7 +1,7 @@
 let score = 0
-let rightAns
-let wrongAns
-let finalAnswer
+let rightAns = {}
+let wrongAns = {}
+let finalAnswer = {}
 
 function genNew () {
   var sign = ['+', '-', 'x', ':']
@@ -22,8 +22,7 @@ function genNew () {
   let answers = [rightAns, wrongAns]
 
   finalAnswer = answers[Math.floor(Math.random() * 2)]
-  document.getElementById('Calculation').innerHTML = firstElement + ' ' +
-  operator + ' ' + secElement + ' ' + '=' + ' ' + finalAnswer
+  document.getElementById('Calculation').innerHTML = firstElement + ' ' + operator + ' ' + secElement + ' ' + '=' + ' ' + finalAnswer
 }
 
 function checkTrue () {
@@ -60,6 +59,9 @@ function RecordScore () {
 
 // script to export function for testing
 class RandomMath {
+  constructor () {
+    score = 0
+  }
   genNewMath () {
     genNew()
   }
@@ -84,8 +86,8 @@ class RandomMath {
   getFinalAnswer () {
     return finalAnswer
   }
-  setScore (Message) {
-    score = Message
+  setScore (message) {
+    score = message
   }
 }
 
