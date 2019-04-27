@@ -1,5 +1,3 @@
-import 'mocha'
-
 var assert = require('assert')
 
 // define test unit
