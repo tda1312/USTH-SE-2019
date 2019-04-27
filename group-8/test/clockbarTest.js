@@ -1,4 +1,3 @@
-// using for mock DOM test
 var chai = require('chai')
 var expect = chai.expect
 var { describe, it } = require('mocha')
