@@ -72,6 +72,18 @@ class RandomMath {
   displayScoreMath () {
     return displayScore()
   }
+  getScore () {
+    return score
+  }
+  getRightAns () {
+    return rightAns
+  }
+  getWrongAns () {
+    return wrongAns
+  }
+  getFinalAnswer () {
+    return finalAnswer
+  }
 }
 
 module.exports = new RandomMath()
