@@ -29,9 +29,10 @@ function genNew () {
 function checkTrue () {
   if (finalAnswer === rightAns) {
     score += 1
-    document.getElementById('score').innerHTML = score
+    document.getElementById('score').innerHTML = displayScore()
   } else {
-    document.getElementById('score').innerHTML = score
+    localStorage.setItem('usrScore', JSON.stringify(score)) // save score
+    window.location.href = '../menu/endGame.html'
   }
 
   genNew()
@@ -40,9 +41,10 @@ function checkTrue () {
 function checkFalse () {
   if (finalAnswer === wrongAns) {
     score += 1
-    document.getElementById('score').innerHTML = score
+    document.getElementById('score').innerHTML = displayScore()
   } else {
-    document.getElementById('score').innerHTML = score
+    localStorage.setItem('usrScore', JSON.stringify(score)) // save score
+    window.location.href = '../menu/endGame.html'
   }
 
   genNew()
@@ -50,8 +52,4 @@ function checkFalse () {
 
 function displayScore () {
   return 'Score:' + score
-}
-
-function restart () {
-  score = 0
 }
