@@ -11,10 +11,10 @@ function checkHS () {
     localStorage.setItem('Score', JSON.stringify(highScore)) // save new high score
   }
 
-  updateHighScore(highScore)
+  updateHighScore(userpoint, highScore)
 }
 
-function updateHighScore (highScore) {
-  document.getElementById('scrdisplay').innerHTML = highScore // print high score
-  document.getElementById('scrdiv').style.display = 'block' // show high score block
+function updateHighScore (score, highScore) {
+  document.getElementById('highScore').innerHTML = highScore // print high score
+  document.getElementById('score').innerHTML = highScore // print score
 }
