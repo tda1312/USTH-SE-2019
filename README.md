@@ -9,3 +9,7 @@ The whole project is in this [link](https://github.com/larycoder/USTH-SE-2019/tr
 - Lê Như Chu Hiệp - Product Owner : build clock bar for counting time in game playing : task list [here](https://github.com/larycoder/USTH-SE-2019/issues/17)
 ## Demo of project: 
 the demo of project has link in  [here](https://dum-dum00.github.io/menu/demo.html)
+- the [demo](https://dum-dum00.github.io/clock_bar/demo.html) of clock bar ( Lê Như Chu Hiệp )
+- the [demo]( https://dum-dum00.github.io/menu/demo.html ) of menu ( Phạm Phan Bách )
+- the [demo](https://dum-dum00.github.io/random_calculation/demo.html) of random quick math ( Trương Sĩ Thi Vũ )
+- the [demo](https://dum-dum00.github.io/menu/endGame.html) of high score ( Tạ Đức Anh )
