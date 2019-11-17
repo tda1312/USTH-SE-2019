@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Quick Math Menu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <h1 class="main-font title">Quick Math</h1>
+    <ul id="main-menu"></ul>
+ 
+    <!-- Button list --> 
+    <div class="menuOpt">
+    <button id="btnStart" onclick="window.location.href = '../random_calculation/demo.html';">Start Game</button>
+    <br>
+    <br>
+
+    <button id="btnGuide">How to Play</button>
+    <br>
+    <br>
+
+    <button id="btnCredits">Credits</button>
+    </div>
+
+
+    <!-- Guide Pop up-->    
+    <div id="guidePop" class="modal">
+        <div class="modal-content">
+            <div class="close">&times;</div>
+            <br>
+            Insert guide here.....
+        </div>        
+    </div>
+
+    <!-- Credits Pop up --> 
+    <div id="creditsPop" class="credits">
+        <div class="creditsContent">
+            <p>Insert Credits here </p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptatem voluptate corporis iste voluptatibus adipisci nulla possimus repellendus eum illum molestiae, atque temporibus ratione tempore itaque, ipsa dicta, sed modi.</p>
+        </div>
+    </div>
+    
+    <!--load controller of menu --> 
+    <script type="text/javascript" src="menu.js"></script>
+  </body>
+</html>

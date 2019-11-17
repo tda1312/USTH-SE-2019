@@ -1,3 +1,8 @@
+# name: SE project
+## command:
+- name of project: Quick Math
+- platform: web
+## date: 2019-04-02
 # USTH-SE-2019
 - This is web project of team 8 USTH we use [this](http://www.jogosgratispro.com/demo/freakymath/index.html) as reference
 - The whole project is in this [link](https://github.com/larycoder/USTH-SE-2019/tree/project)

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./draw.css">
+        <script type="text/javascript" src="./class.js"></script>
+        <script>
+            var clockBar = new clockBarManager();
+            function runTimeProcess () {
+                clockBar.timeProcess();
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <button type="button" onclick="runTimeProcess();" style="padding:15px 32px;">time</button>
+        </div>
+        <div id="Bar counting" class="clockBarBorder">
+            <div id="perCents" class="clockBarFluid"></div>
+        </div>
+        
+    </body>
+</html>

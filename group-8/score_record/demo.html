@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+		.scrboard{
+			outline: thick ridge red;
+			border: 2px solid red;
+			border-radius: 8px 12px 15px;
+			font-family: Comic Sans MS, cursive, sans-serif;
+			padding: 0px;
+			text-align: center;
+			font-size: 35px;
+			color: rgb(0, 0, 0);
+		}
+	</style>
+	<script type="text/javascript" src='function.js'></script>
+  </head>
+  
+  <body>
+	<div style="display: none" class="scrboard" id="scrdiv">
+		BEST SCORE: <span id="highscore"></span>
+		SCORE: <span id="score"></span>
+	</div>
+	<input type="button" name="answer" value="Get highscore" onclick="showHS()">
+  </body>
+</html>

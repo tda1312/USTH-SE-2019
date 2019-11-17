@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quick Math</title>
+
+    <!-- quick math function path -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
+    <script src="main.js"></script>
+
+    <!-- clock bar loading path-->
+    <link rel="stylesheet" type="text/css" href="../clock_bar/draw.css">
+    <script type="text/javascript" src="../clock_bar/class.js"></script>
+  </head>
+
+  <body>
+
+    <p id="score" class="score"></p>
+    <script>document.getElementById('score').innerHTML= displayScore()</script>
+
+    <div class="Intro">
+      <h1>Quick Math</h1>
+      <h2>Welcome to Quick Math, test your calculating speed here</h2>
+    </div>
+
+    <div class="UI">
+
+      <!-- clock bar render path -->
+      <div id="Bar counting" class="clockBarBorder">
+        <div id="perCents" class="clockBarFluid"></div>
+      </div>
+
+      <h1 id = "Calculation" class="Calculation" ></h1>
+
+      <!-- initial prepare loading page-->
+      <script>
+
+        // callout clockBar
+        let clockBar = new clockBarManager();
+        clockBar.timeProcess();
+        
+        // function to send clockBar instant to setInterval
+        function sendTosetInterval () {
+          return clockBar;
+        }
+
+        // update time out
+        var test = setInterval(function () {
+          let clockBar = sendTosetInterval ();
+          if (clockBar.getTimeout() === 1){
+            RecordScore()
+            window.location.href = '../menu/endGame.html';
+          }
+        }, 10)
+
+        // true button click
+        function True(){
+          checkTrue();
+          clockBar.setTimeout('false');
+          clockBar.timeProcess();
+        }
+
+        // false button click
+        function False(){
+          checkFalse();
+          clockBar.setTimeout('false');
+          clockBar.timeProcess();
+        }
+
+        // create math
+        genNew();
+      </script>
+
+    <div class="row">
+      <div class="column">
+        <button id = "buttontrue" class="true" type="button"  onclick="True()">TRUE</button>
+      </div>
+
+      <div class="column">
+        <button id = "buttonfalse" class="false" type="button"  onclick="False()">FALSE</button>
+      </div>
+    </div>
+
+
+    </div>
+
+  </body>
+
+</html>
